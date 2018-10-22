@@ -1,0 +1,3 @@
+<div style="display:inline-block;padding-right: 10px" *ngFor="let m of movies">
+  <a [routerLink]="[ '/movieDetalhe', m.Title ]"><img  src={{m.Poster}}></a>
+</div>
