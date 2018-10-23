@@ -1,3 +1,12 @@
-<div style="display:inline-block;padding-right: 10px" *ngFor="let m of movies">
-  <a [routerLink]="[ '/movieDetalhe', m.Title ]"><img  src={{m.Poster}}></a>
+<div class="row">
+  <div class="col-md-3" *ngFor="let movie of movies">
+    <div class="card">
+      <img class="card-img-top" src={{movie.Poster}} alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{movie.Title}}</h5>
+        <p class="card-text"><small class="text-muted">{{movie.Year}}, {{movie.Genre}}</small></p>
+        <a [routerLink]="[ '/movieDetalhe', movie.Title ]" class="card-link">Detalhes</a>
+      </div>
+    </div>
+  </div>
 </div>
