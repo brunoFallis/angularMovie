@@ -8,12 +8,14 @@ import { MovieDetalheComponent } from './movie-detalhe/movie-detalhe.component';
 import { MovieListaComponent } from './movie-lista/movie-lista.component';
 import { HttpClientModule } from '@angular/common/http';
 import { fromEventPattern } from 'rxjs';
+import { MovieSearchComponent } from './movie-search/movie-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieDetalheComponent,
-    MovieListaComponent
+    MovieListaComponent,
+    MovieSearchComponent
   ],
   imports: [
     BrowserModule,

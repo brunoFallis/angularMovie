@@ -13,11 +13,19 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   returnMovies(): Observable<Movie[]> {
-    return this.http.get<Movie[]>('http://localhost:8080/movie/');
+    return this.http.get<Movie[]>('http://localhost:8080/movie');
   }
 
-  returnMovie(title: string): Observable<Movie> {
-    return this.http.get<Movie>('http://localhost:8080/movie/' + title);
+  returnMoviesByName(title: string): Observable<Movie[]> {
+    return this.http.get<Movie[]>('http://localhost:8080/movie/' + title);
+  }
+
+  returnMovie(id: string): Observable<Movie>{
+    return this.http.get<Movie>('http://localhost:8080/movie/detail/' + id)
+  }
+
+  returnMovieAPI(title: string): Observable<Movie[]>{
+    return this.http.get<Movie[]>('http://localhost:8080/movie/api/' + title);
   }
 
 }

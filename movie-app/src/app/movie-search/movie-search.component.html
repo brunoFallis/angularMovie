@@ -1,4 +1,5 @@
 <div class="row">
+  
   <div class="col-md-3" *ngFor="let movie of movies">
     <div class="card">
       <img class="card-img-top" src={{movie.Poster}} alt="Card image cap">
@@ -9,4 +10,12 @@
       </div>
     </div>
   </div>
+  
+  <div class="col-md-3">
+    <button (click)="buscarApi()">
+      <h2>+</h2>
+    </button>
+  </div>
+
 </div>
+

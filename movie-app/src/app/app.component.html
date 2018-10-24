@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="javascript:void(0);">Filmes</a>
+    <a class="navbar-brand" [routerLink]="[ 'movieList']">Filmes</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="javascript:void(0);">Início <span class="sr-only">(current)</span></a>
+                <a class="nav-link" [routerLink]="[ 'movieList']">Início <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbarDropdownMenuLink" role="button"
@@ -30,7 +30,7 @@
 
         <div style="margin-right:35%">
             <input placeholder="buscar filme" [(ngModel)]="t">
-            <a style="margin-left:10px" [routerLink]="[ 'movieDetalhe', t ]">
+            <a style="margin-left:10px" [routerLink]="[ 'movieSearch', t]">
                 <button>Buscar</button>
             </a>
         </div>

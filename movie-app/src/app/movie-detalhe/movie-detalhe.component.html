@@ -1,10 +1,14 @@
-<div style="display:inline-block">
-  <img src={{movie.Poster}}>
-</div>
+<div class="row jumbotron">
+  <div class="col-md-3">
+    <img src={{movie.Poster}}>
+  </div>
 
-<div style="display:inline-block">
-  <h2>{{movie.Title}}</h2>
-  <h2>{{movie.Runtime}}</h2>
-  <h2>{{movie.Year}}</h2>
-  <h2>{{movie.Director}}</h2>
+  <div class="col-md-9">
+    <h2>{{movie.Title}}</h2>
+    <h5>{{movie.Year}}</h5>
+    <h5>{{movie.movieDetailDTO.Director}}</h5>
+    <h5>{{movie.movieDetailDTO.Genre}}</h5>
+    <h5>{{movie.movieDetailDTO.Released}}</h5>
+    <p style="margin-top: 60px">{{movie.movieDetailDTO.Plot}}</p>
+  </div>
 </div>
