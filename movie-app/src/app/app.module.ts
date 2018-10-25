@@ -9,13 +9,15 @@ import { MovieListaComponent } from './movie-lista/movie-lista.component';
 import { HttpClientModule } from '@angular/common/http';
 import { fromEventPattern } from 'rxjs';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { CommentComponent } from './movie-detalhe/comment/comment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieDetalheComponent,
     MovieListaComponent,
-    MovieSearchComponent
+    MovieSearchComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,

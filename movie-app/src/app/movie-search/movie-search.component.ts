@@ -24,7 +24,7 @@ export class MovieSearchComponent implements OnInit {
 
   buscarApi(){
     //VERIFICAR A ATRIBUIÇÃO DO MOVIES
-    this.service.returnMovieAPI(this.title).subscribe(movies => this.movies.movies);
+    this.service.returnMovieAPI(this.title).subscribe(movies => this.movies = movies);
   }
 
 }
